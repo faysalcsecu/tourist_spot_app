@@ -20,3 +20,10 @@ A Flutter-based mobile application showcasing popular tourist destinations in Ba
 - 🔔 **FlutterToast notifications** for feedback
 - 🔄 **Smooth navigation** between pages
 - 🎨 **Modern UI** with Google Fonts  
+
+## 👤 Author
+
+**Faysal Bin Alauddin**  
+📧 Email: faysalf716@gmail.com  
+🔗 GitHub: [your-github-profile](https://github.com/faysalcsecu)  
+🔗 LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/faysal-bin-alauddin-4815a92a7/)  
