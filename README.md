@@ -25,5 +25,5 @@ A Flutter-based mobile application showcasing popular tourist destinations in Ba
 
 **Faysal Bin Alauddin**  
 📧 Email: faysalf716@gmail.com  
-🔗 GitHub: [your-github-profile](https://github.com/faysalcsecu)  
-🔗 LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/faysal-bin-alauddin-4815a92a7/)  
+🔗 GitHub: [Faysal Bin Alauddin](https://github.com/faysalcsecu)  
+🔗 LinkedIn: [Faysal Bin Alauddin](https://www.linkedin.com/in/faysal-bin-alauddin-4815a92a7/)  
