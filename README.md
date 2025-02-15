@@ -5,7 +5,7 @@ A Flutter-based mobile application showcasing popular tourist destinations in Ba
 # **Screenshots**
 
 ## **Splash Page**
-![screenshot](assets/screenshots/1.png)
+![abc](assets/screenshots/1.png)
 
 ## **Home Page**
 ![screenshot](assets/screenshots/2.png)
@@ -26,4 +26,6 @@ A Flutter-based mobile application showcasing popular tourist destinations in Ba
 **Faysal Bin Alauddin**  
 📧 Email: faysalf716@gmail.com  
 🔗 GitHub: [Faysal Bin Alauddin](https://github.com/faysalcsecu)  
-🔗 LinkedIn: [Faysal Bin Alauddin](https://www.linkedin.com/in/faysal-bin-alauddin-4815a92a7/)  
+🔗 LinkedIn: [Faysal Bin Alauddin](https://www.linkedin.com/in/faysal-bin-alauddin-4815a92a7/) 
+
+
