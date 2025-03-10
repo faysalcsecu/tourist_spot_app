@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:tourist_spot_app/places.dart';
 import 'constant.dart';
-
 
 class Homepage extends StatelessWidget {
   Homepage({super.key});
@@ -37,7 +37,6 @@ class Homepage extends StatelessWidget {
     }
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,16 +44,15 @@ class Homepage extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
         title: Text(
           "The places",
-          style: GoogleFonts.acme(color: Colors.white),
+          style: GoogleFonts.yaldevi(color: Colors.white),
         ),
       ),
-
-
       body: GridView.count(
         crossAxisCount: 2,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
-        children: places.map((place) => buildPlaceCard(context, place)).toList(),
+        children:
+            places.map((place) => buildPlaceCard(context, place)).toList(),
       ),
     );
   }
@@ -63,55 +61,106 @@ class Homepage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Fluttertoast.showToast(msg: place["name"]);
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Places(
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => Places(
+        //       name: place["name"],
+        //       image: place["image"],
+        //       description: place["description"],
+        //     ),
+        //   ),
+        // );
+
+        Get.to(() => Places(
               name: place["name"],
               image: place["image"],
               description: place["description"],
-            ),
-          ),
-        );
+            ));
       },
+
       child: Card(
         elevation: 5,
         color: Colors.purpleAccent[200],
         margin: const EdgeInsets.all(10),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15), // Rounded corners for the image
-                child: Image.asset(
-                  "assets/images/${place['image']}", // Load image dynamically
-                  width: 400,
-                  height: 300,
-                  fit: BoxFit.cover,
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                "assets/images/${place['image']}",
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              left: 10,
+              right: 10,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                decoration: BoxDecoration(
+                  // color: Colors.(0.8),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Text(
+                  place["name"],
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              const SizedBox(height: 10),
-              Text(
-                place["name"],
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
+
+      // child: Card(
+      //   elevation: 5,
+      //   color: Colors.purpleAccent[200],
+      //   margin: const EdgeInsets.all(10),
+      //   child: Container(
+      //     decoration: BoxDecoration(
+      //       borderRadius: BorderRadius.circular(10),
+      //     ),
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         Expanded(
+      //           child: ClipRRect(
+      //             borderRadius: BorderRadius.circular(15), // Rounded corners for the image
+      //             child: Image.asset(
+      //               "assets/images/${place['image']}", // Load image dynamically
+      //               // width: 400,
+      //               // height: 300,
+      //
+      //               width: double.infinity,
+      //               height: double.infinity,
+      //
+      //               fit: BoxFit.cover,
+      //             ),
+      //           ),
+      //         ),
+      //         const SizedBox(height: 10),
+      //         Text(
+      //           place["name"],
+      //           textAlign: TextAlign.center,
+      //           style: const TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 18,
+      //             fontWeight: FontWeight.bold,
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
     );
   }
-
 }
-
-
