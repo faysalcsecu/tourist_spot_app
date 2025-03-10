@@ -99,21 +99,13 @@ class Homepage extends StatelessWidget {
               bottom: 10,
               left: 10,
               right: 10,
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                decoration: BoxDecoration(
-                  // color: Colors.(0.8),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Text(
-                  place["name"],
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+              child: Text(
+                place["name"],
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
